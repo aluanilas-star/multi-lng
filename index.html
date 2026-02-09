@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FG | AI PRO VISION</title>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision/vision_bundle.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h3 style="margin: 10px 0; font-size: 1.6rem; letter-spacing: 4px;">
+        FG <span style="color: #ff00ff; font-weight: 200;">|</span> AI VISION MULTI-LANG
+    </h3>
+
+    <div class="controls">
+        <button onclick="setLanguage('ru')" id="btn-ru" class="active">РУССКИЙ</button>
+        <button onclick="setLanguage('en')" id="btn-en">ENGLISH</button>
+        <button onclick="setLanguage('kk')" id="btn-kk">ҚАЗАҚША</button>
+    </div>
+    
+    <div id="aiContainer">
+        <video id="userCamera" autoplay playsinline></video>
+        <div id="aiResult">ЗАГРУЗКА...</div>
+    </div>
+
+    <div class="status-bar" id="systemStatus">Инициализация нейросети...</div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
